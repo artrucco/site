@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
 }
 .header{
     width: 100%;
@@ -19,7 +20,7 @@
 }
 
 nav img{
-    width: 150px;
+    width: 10%;
 }
 
 .nav-links {
@@ -42,7 +43,7 @@ nav img{
     content: '';
     height: 2px;
     width: 0;
-    background: #009688;
+    background: #ffffff;
     display: block;
     margin: auto;
     left: 0;
@@ -82,8 +83,8 @@ nav img{
     cursor: pointer; 
 }
 .hero-btn:hover{
-    border: 1px solid #f44336;
-    background: #f44336;
+    border: 1px solid #002d29;
+    background: #002d29;
     transition: 1s;
 }
 
@@ -218,7 +219,6 @@ h3{
 .layer:hover h3{
     bottom: 49%;
     opacity: 1;
-
 }
 
 /*---------- equipe ----------*/
@@ -230,14 +230,19 @@ h3{
     padding-top: 100px;
 }
 .equipe-col{
-    flex-basis: 31%;
+    flex-basis: 30%;
     border-radius: 10px;
     margin-bottom: 5%;
-    text-align: left;
+    text-align: center;
     position: relative;
 }
+.equipe-col:nth-child(1,2){
+    flex-basis: 20%;
+}
 .equipe-col img{
-    width: 100%;
+    width: 250px;
+    height: 220px;
+    object-fit: cover;
     border-radius: 10px;
 }
 .equipe-col p{
@@ -246,14 +251,198 @@ h3{
 .equipe-col h3{
     margin-top: 16px;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: center;
 }
 
-/*---------------- Testimonials -----------------*/
+/*---------------- Institutions -----------------*/
 
-.testimonials{
+.institutions{
     width: 80%;
     margin: auto;
     padding-top: 100px;
     text-align: center;
+}
+.institutions h3{
+    color:#767676;
+}
+.inst-row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.inst-col{
+    flex-basis: 15%;
+    
+    margin-bottom: 5%;
+    padding: 20px;
+    position: relative;
+}
+.inst-col button{
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.inst-col img{
+    max-height: 160px;
+    max-width: 250px;
+    display: flex;
+}
+.inst-col button:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+
+/*-------------- Footer -----------------------*/
+
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background: linear-gradient(to right, #00093c, #002d29);
+    color: #fff;
+    padding: 70px 0 20px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+}
+.footer-row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.footer-col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+.footer-col:nth-child(2){
+    flex-basis: 15%;
+}
+.footer-col:nth-child(3){
+    flex-basis: 10%
+}
+.logo{
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-col h3{
+    width: fit-content;
+    margin-bottom: 30px;
+    position: relative;
+}
+.footer-col p{
+    width: fit-content;
+    color: #ccc;
+    position:relative;
+}
+.email-id{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+form .fa{
+    font-size: 18px;
+    margin-right: 10px; 
+}
+form input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+form button .fa{
+    font-size: 16px;
+    color: #ccc;
+}
+.social-icons .fa{
+    width: 50px;
+    font-size: 40px;
+    color: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.social-icons .fa:hover{
+    transform: scale(1.3);
+    z-index: 2;
+}
+
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+.copyright{
+    text-align: center;
+}
+
+.underline{
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+.underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving{
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+@media (max-width: 700px){
+    footer{
+        bottom: unset;
+    }
+    .footer-col{
+        flex-basis: 100%;
+    }
+    .footer-col:nth-child(2), .footer-col:nth-child(3){
+        flex-basis: 100%;
+    }
 }
