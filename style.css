@@ -12,7 +12,7 @@
     background-position: center;
 }
 
-.nav {
+nav{
     display: flex;
     padding: 2% 6%;
     justify-content: space-between;
@@ -20,10 +20,12 @@
 }
 
 nav img{
-    width: 10%;
+    width: 200px;
 }
 
 .nav-links {
+    align-items: center;
+    position: relative;
     flex: 1;
     text-align: right;
 }
@@ -64,7 +66,8 @@ nav img{
     text-align: center;
 }
 .text-box  h1{
-    font-size: 62px;
+    margin-top: 80px;
+    font-size: 56px;
 }
 .text-box p{
     margin: 10px 0 40px;
@@ -236,7 +239,10 @@ h3{
     text-align: center;
     position: relative;
 }
-.equipe-col:nth-child(1,2){
+.equipe-col:nth-child(1){
+    flex-basis: 20%;
+}
+.equipe-col:nth-child(2){
     flex-basis: 20%;
 }
 .equipe-col img{
@@ -294,7 +300,11 @@ h3{
     transform: scale(1.1);
     z-index: 2;
 }
-
+@media (max-width: 700px){
+    .inst-row{
+        flex-direction: column;
+    }
+}
 
 /*-------------- Footer -----------------------*/
 
@@ -445,4 +455,38 @@ hr{
     .footer-col:nth-child(2), .footer-col:nth-child(3){
         flex-basis: 100%;
     }
+}
+
+/*----------------pagina publicacoes---------------------*/
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/Rede-de-computadores.jpg);
+    background-position: center;
+    background-size: cover;
+    
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+/*--------------conteudo - publicacoes -------------------*/
+
+.cont-pub{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.cont-pub-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.cont-pub-col img{
+    width: 100%;
+    border-radius: 5px;
 }
