@@ -2,13 +2,21 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto','Playfair Display', serif;
-    
     box-sizing: border-box;
+}
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+:root{
+    --clr-neutral-900: hsl(207,19%,9%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-accent-400: hsl(142, 90%, 61%);
 }
 .header{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 5, 10, 0.949),rgba(0, 0, 0, 0.25)), url(images/fundo/pawel-czerwinski-eybM9n4yrpE-unsplash.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.95),rgba(0, 0, 0, 0.25)), url(images/fundo/pawel-czerwinski-eybM9n4yrpE-unsplash.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -100,9 +108,9 @@ nav img{
     cursor: pointer; 
 }
 .hero-btn:hover{
-    border: 1px solid #00050af2;
-    background: #00050af2;
-    transition: 1s;
+    border: 1px solid #003366;
+    background: #003366;
+    transition: 0.5s;
 }
 
 nav .fa{
@@ -331,7 +339,7 @@ footer{
     width: 100%;
     position: relative;
     bottom: 0;
-    background: linear-gradient(to right/*, #00093c*/,#00050af2, #002d29);
+    background: linear-gradient(to right/*, #00093c*/,rgb(0, 8, 19), #003366);
     color: #fff;
     padding: 70px 0 20px;
     border-top-left-radius: 100px;
@@ -520,11 +528,9 @@ hr{
 .sub-header{
     height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 5, 10, 0.99),rgba(0, 5, 29, 0.4)), url(images/fundo/pawel-czerwinski-eybM9n4yrpE-unsplash.jpg);
+    background-image: linear-gradient(rgba(0, 5, 10, 0.99),rgba(0, 0, 0, 0.4)), url(images/fundo/pawel-czerwinski-eybM9n4yrpE-unsplash.jpg);
     background-position: center;
     background-size:cover;
-    
-    
     color: #fff;
 }
 .sub-header h1{
@@ -571,10 +577,18 @@ hr{
 
 /*-------------- conteudo - pagina projetos em andamento ------------*/
 
+.row{
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+}
+.row >*{
+    flex:1 1 20em;
+}
 .cont-proj{
     width: 80%;
     margin: auto;
-    padding-top: 80px;
+    padding-top: 40px;
     padding-bottom: 50px;
 }
 .cont-proj-col{
@@ -592,6 +606,112 @@ hr{
 .cont-proj-col p{
     padding: 15px 0 25px;
     justify-content:space-evenly;
+}
+.card{
+    color: var(--clr-neutral-100);
+    background-image: url(images/fundo/akira-hojo-ZxGdri2EWzk-unsplash.jpg);
+    background-size: cover;
+    padding: 3rem 0 0;
+    max-width: 35ch;
+    --height: 50ch;
+    max-height: var(--height);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+.card:nth-child(2){
+    background-image: url(images/fundo/pascal-bullan-1w4T0Z3toPI-unsplash.jpg);
+}
+.card:hover,
+.card:focus-within{
+    transform: scale(1.05);
+}
+.card-content{
+    background-size:auto;
+    max-height:var(--height);
+    --padding: 2rem;
+    padding: var(--padding);
+    background: linear-gradient(
+        rgba(0,0,0,0),
+        rgb(0, 0, 0, 0.4) 20%,
+        rgba(0,0,0,1)
+    );
+    /* transform: translateY(62%); */
+    transition: transform 500ms ease;
+}
+.card-title{
+    position: relative;
+    width: max-content;
+    /* outline: 1px solid red; */
+}
+.card-title::after{
+    content: '';
+    position: absolute;
+    height: 4px;
+    left: calc(var(--padding)*-1);
+    bottom: -5px;
+    width: calc(100% + var(--padding));
+    background: #fff;
+    /* transform: scaleX(0); */
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+.card:hover .card-title::after{
+    transform: scaleX(1);
+}
+.card-body{
+    color: #fff;
+    left: 0;
+    padding: 1em 0 1.5em;
+    justify-content:space-evenly;
+    font-weight: bold;
+}
+
+@media(hover){
+    .card-content{
+        transform: translateY(35ch);
+        transition: transform 500ms ease;
+    }
+    .card:hover .card-content,
+    .card:focus-within .card-content{
+        transform: translateY(0);
+        transition-delay: 500ms;
+    }
+    .card:focus-within .card-content{
+        transition-duration: 0ms;
+    }
+    .card-content > *:not(.card-title){
+        opacity: 0;
+        transition: opacity 500ms linear;
+    }
+    .card:hover .card-content > *:not(.card-title),
+    .card:focus-within .card-content > *:not(.card-title){
+        opacity: 1;
+        transition-delay: 900ms;
+    }
+    .card-title:after {
+        transform: scaleX(0); 
+    }
+}
+
+.button{
+    display: inline;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.5em 1.25em;
+    /* border-radius: 0.25em; */
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer; 
+}
+.button:hover,
+.button:focus{
+    background-color: var(--clr-neutral-100);
+    border: 1px solid #003366;
+    background: #003366;
+    transition: 0;
 }
 
 /*--------------- pagina contato ---------------*/
@@ -617,13 +737,13 @@ hr{
     display: contents;
 }
 .blue-btn{
-    border: 1px solid #00093c;
+    border: 1px solid #003366;
     background: transparent;
-    color: #00093c;
+    color: #003366;
 }
 .blue-btn:hover{
     color: #fff;
-    background:#00093c;
+    background: rgb(0, 51, 102);
 }
 .contato-col div{
     display: flex;
@@ -633,7 +753,7 @@ hr{
 }
 .contato-col div .fa{
     font-size: 28px;
-    color: #00093c;
+    color: #003366;
     margin: 10px;
     margin-right: 30px;
 }
