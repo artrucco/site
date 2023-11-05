@@ -14,13 +14,22 @@ Laboratorio de Redes
 
 -- Responsáveis
 -- Doutorandos
+ - G Caldas, G Oliveira, Luis Filipe Kopp, Marcos
 -- Mestrandos
+ - Ana Luisa Souza Castanheira da Cruz, Emily, Fabio, Felipe, Juliane, Pedro Boechat, Rafael     Figueiredo, Sidney Outeiro, Thiago Masella
 -- Iniciação Científica
+ - Matheus Gomes Rocha
 -- Colaboradores
 
 - Publicações
 
-- Projetos em Andamento
+- Projetos em Andamento:
+- equipes de competição / estudantis
+nautilus
+analytica
+gris
+krypta
+- 
 
 - creditos de algumas imagens:
 
