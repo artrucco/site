@@ -26,10 +26,13 @@ Laboratorio de Redes
 
 - Projetos em Andamento:
 - equipes de competição / estudantis
-  nautilus
-  analytica
-  gris
-  krypta
+- conecta-se
+
+- comissionamento petrobras
+
+- faperj / mobi crowd
+- faperj / AARU
+
 -
 
 - creditos de algumas imagens (unsplash):

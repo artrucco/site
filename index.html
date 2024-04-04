@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="with=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site do Lab - Novo Design</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,45 +33,138 @@
     <div class="text-box">
       <h1>LabNet<br>Laboratório de Redes e Multimídia</h1>
       <p>Universidade Federal do Rio de Janeiro<br>Instituto Tércio Pacitti de Aplicações e Pesquisas Computacionais</p>
-      <button href="#" class="nbutton type1">
+      
+      <button onclick="scrollToSection('quemsomos')" class="nbutton type1">
         <span>Saiba Mais</span>
       </button>
+  
     </div>
     <div class="img-credit">
       <p>Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="blank">Pawel Czerwinski</a> on <a href="https://unsplash.com/photos/eybM9n4yrpE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="blank">Unsplash</a></p>
     </div>
-    
   </section>
-
-<!---------Publicações--------------->
-
-<!-------- Projetos em andamento -------->
-
-<section class = "projetos">
-    <h1>Projetos em Andamento</h1>
-    <p>texto placeholder texto placeholder</p>
-
-    <div class="row">
-      <div class="projetos-col">
-        <img src="images/fundo/pascal-bullan-1w4T0Z3toPI-unsplash.jpg">
-        <div class="layer">
-          <h3>Aquaponia</h3>
-        </div>
-      </div>
-      <div class="projetos-col">
-        <img src="images/fundo/akira-hojo-ZxGdri2EWzk-unsplash.jpg">
-        <div class="layer">
-          <h3>UFRJ Nautilus</h3>
-        </div>
-      </div>
-      <div class="projetos-col">
-        <img src="images/fundo/clark-van-der-beken-KvuSeA5Ep4c-unsplash.jpg">
-        <div class="layer">
-          <h3>Projeto 3</h3>
-        </div>
+  <script>
+    function scrollToSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+<!--------- QUEM SOMOS ----------->
+<section class="cont-proj">
+  <section id = "quemsomos" class="title container">
+    <div class="trow">
+      <div class="col-md-13">
+        <h1>QUEM SOMOS?</h1>
+        <div class="seperator"></div>
+        <p>O Laboratório de Redes e Multimídia (LABNET) localiza-se no Instituto Tércio Pacitti de Aplicações e Pesquisas Computacionais (NCE) da Universidade Federal do Rio de Janeiro (UFRJ).</p>
       </div>
     </div>
 </section>
+   <!-- Start Blog Layout -->
+  <div class="container">
+    <div class="prow">
+      <div class="col-md-6 item">
+        <div class="item-in">
+          <h4>Direção</h4>
+          <div class="seperator"></div>
+          <p>Professor Claudio Miceli de Farias</p>
+        </div>
+      </div>
+    <div class="col-md-6 item">
+      <div class="item-in">
+        <h4>Missão</h4>
+        <div class="seperator"></div>
+        <p>Executar de maneira coordenada, em um ambiente catalisador de formação, projetos de ensino, pesquisa e extensão de caráter inovador e ético.</p>
+      </div>
+    </div>
+    <div class="col-md-6 item">
+      <div class="item-in">
+        <h4>Visão</h4>
+          <div class="seperator"></div>
+          <p>Ser um agente transformador na formação dos alunos da UFRJ para que estes tenham acesso ao estado da arte nas áreas de atuação do laboratório, atinjam excelência técnica e empoderamento, como também, ser um agente transformador do seu entorno</p>
+      </div>
+    </div>
+    <div class="col-md-6 item">
+      <div class="item-in">
+        <h4>Valores</h4>
+          <div class="seperator"></div>
+          <p>Excelência técnica, ética, coragem para lidar com o risco, espírito inovador, responsabilidade social, harmonia e integração entre as pessoas dentro e fora do ambiente de trabalho, valorização da diversidade</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--------- LAFUSION ----------------> >
+<section class="cont-proj">
+  <section class="title container">
+    <div class="trow">
+      <div class="col-md-12">
+        <h1>LA FUSION</h1>
+        <div class="seperator"></div>
+        <p>Conferência Latinoamericana sobre Data Fusion</p>
+      </div>
+    </div>
+  </section>
+   <!-- Start Blog Layout -->
+  <div class="container">
+    <div class="prow">
+      <img src="images/icons/lafusion.svg">
+      <div class="col-md-6 item">
+        <div class="item-in">
+          <h4>The Latin American Workshop on Information Fusion</h4>
+          <div class="seperator"></div>
+          <p>The First Latin American Workshop on Information Fusion (LAFUSION 2023) is a workshop focusing on the latest research results on the Information Fusion in Latin America. The goal of this workshop is to create a community of Information Fusion researchers in Latin America. Accepted papers will be published in IEEE. Authors of accepted papers are expected to present their work in a plenary session as part of the main workshop program.
+            Information fusion is a multidisciplinary field that focuses on combining and integrating information from diverse sources to improve the accuracy, completeness, and reliability of the resulting information. It involves the process of merging data or knowledge from multiple sensors, databases, or information systems to generate a unified and coherent representation of the underlying reality.  
+          </p>
+          <a href="https://lafusion.cos.ufrj.br/" target = "blank" >
+          <button class="nbutton type1 neg">
+            <span>Saiba Mais</span>
+          </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--------- Publicações ------------->
+<!-- <section class="cont-proj">
+  <section class="title container">
+    <div class="trow">
+      <div class="col-md-12">
+        <h1>Título Provisório</h1>
+        <div class="seperator"></div>
+        <p>Blocks with hover effects</p>
+      </div>
+    </div>
+  </section>
+   
+  <div class="container">
+    <div class="prow">
+      <div class="col-md-6 item">
+        <div class="item-in">
+          <h4>Some Kind of Title</h4>
+          <div class="seperator"></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita eveniet consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet, accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!</p>
+          <button href="#" class="nbutton type1 neg">
+            <span>Saiba Mais</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-md-6 item">
+        <div class="item-in">
+          <h4>Some Kind of Title</h4>
+          <div class="seperator"></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita eveniet consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet, accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!</p>
+          <button href="#" class="nbutton type1 neg">
+            <span>Saiba Mais</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-------- Projetos em andamento -------->
 
 <!-------- Equipe -------->
 
