@@ -323,7 +323,7 @@ nav .fa{
     position: relative;
     width: 256px;
     height: 380px;
-    background: #fff;
+    background: transparent;
     padding: 1.5rem;
     text-align: center;
     gap: 20px;
@@ -342,9 +342,11 @@ nav .fa{
 }
 
 .eq-img-box img {
-    width: 100px;
-    border-radius: 0;
+    width: 90%;
+    height: auto;
+    max-height: 90%;
     display: block;
+    object-fit: cover;
 }
 
 .eq-img-box::before{
@@ -454,6 +456,14 @@ nav .fa{
         color:#555;
     }
 
+    .eq-card{
+        border: 2px solid #acacac;
+        transition: border 0.5s ease-in-out;
+    }
+    .eq-card:hover{
+        border: 2px solid var(--clr-lightblue);
+        transition: border 0.7s ease-in-out;
+    }
 
     .card-icons::after{
         transform: scaleX(0.2);
@@ -884,6 +894,7 @@ font-size: 12px;
     width: 80%;
     margin: auto;
     padding-top: 100px;
+    padding-bottom: 0px;
     text-align: center;
 }
 .institutions h3{
@@ -896,6 +907,13 @@ font-size: 12px;
     justify-content: space-around;
     gap: 10px;
 }
+.institutions hr{
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #acacac;
+    margin: 34px auto;
+}
+
 .inst-col{
     flex-basis: 15%;
     margin-bottom: 30px;
@@ -909,8 +927,8 @@ font-size: 12px;
     transition: 0.3s ease-in-out;
 }
 .inst-col img{
-    max-height: 120px;
-    max-width: 200px;
+    max-height: 100px;
+    max-width: 160px;
     display: flex;
 }
 .inst-col button:hover{
